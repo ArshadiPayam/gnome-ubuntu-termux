@@ -1,8 +1,5 @@
 apt-get update -y
-sudo apt-get -o DPkg::Options::="--force-confnew" -y upgrade
-pkg install termux-x11 -y
-apt-get update -y
-apt-get install termux-x11-nightly pulseaudio virglrenderer-android proot-distro -y
+apt-get install termux-x11-nightly pulseaudio virglrenderer-android proot-distro curl -y
 sed -i 's/# allow-external-apps = true/allow-external-apps = true/' .termux/termux.properties
 pd install ubuntu-lts
 pd login ubuntu-lts -- bash -c 'apt update -y'
