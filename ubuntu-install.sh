@@ -4,7 +4,8 @@ sed -i 's/# allow-external-apps = true/allow-external-apps = true/' .termux/term
 pd install ubuntu-lts
 pd login ubuntu-lts -- bash -c 'apt update -y'
 pd login ubuntu-lts -- bash -c 'apt upgrade -y'
-pd login ubuntu-lts -- bash -c 'apt install ubuntu-desktop gnome-terminal gnome-tweaks gnome-shell-extensions gnome-shell-extension-ubuntu-dock nautilus nano gedit dbus-x11 yaru-theme-gtk yaru-theme-icon sudo dconf-cli dconf-editor wget git -y'
+pd login ubuntu-lts -- bash -c 'apt install gnome-core gnome-terminal gnome-tweaks gnome-shell-extensions gnome-shell-extension-ubuntu-dock nautilus nano gedit dbus-x11 yaru-theme-gtk yaru-theme-icon sudo dconf-cli dconf-editor wget git -y'
+pd login ubuntu-lts -- bash -c 'apt install ubuntu-desktop -y'
 pd login ubuntu-lts -- bash -c 'for file in $(find /usr -type f -iname "*login1*"); do rm -rf $file && done'
 pd login ubuntu-lts -- bash -c 'wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash'
 pd login ubuntu-lts -- bash -c 'sudo apt update'
